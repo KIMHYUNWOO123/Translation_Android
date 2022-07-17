@@ -14,3 +14,4 @@ interface IRetrofit {
         @Field("text") text : String
     ) : Call<ReturnData>
 }
+

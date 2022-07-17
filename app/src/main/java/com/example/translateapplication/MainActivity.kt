@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity() {
             var source = "ko"
             var target = "en"
             Log.d(TAG, "onCreate: $text")
-            RetrofitManage.instance.getTrans(source,target, text)
+            var data = RetrofitManage.instance.getTrans(source,target, text)
+            resultText.text = data
         }
     }
 }
