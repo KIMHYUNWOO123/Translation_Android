@@ -13,7 +13,6 @@ object RetrofitClient {
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-            Log.d("Gd", "getRetrofit: gd ")
         }
         return retrofitClient
     }

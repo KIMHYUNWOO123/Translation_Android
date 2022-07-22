@@ -18,7 +18,7 @@ class RetrofitManage {
     fun getTrans(source : String, target: String, text : String, myHandler : MainActivity.MyHandler ){
 
         var call = iRetrofit?.getTranslate(Data.clientId,Data.clientSecret,source, target, text)
-        Log.d(TAG, "getTrans: $text")
+        Log.d(TAG, "getTrans: $text, $source, $target")
         call?.enqueue(object : Callback<ReturnData>{
             override fun onResponse(call: Call<ReturnData>, response: Response<ReturnData>) {
                 Log.d(TAG, "onResponse: ${response.body()!!.message.result.translatedText}")
